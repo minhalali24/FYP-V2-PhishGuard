@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">P</div>
+        <div class="title">
+            <h1>PhishGuard</h1>
+            <p class="subtitle">Deep Learning Detection</p>
+        </div>
+        <div class="header-actions">
+            <div class="theme-toggle">
+                <span class="theme-label">Dark</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
+                    <label for="dark-mode-toggle" class="toggle-label"></label>
+                </div>
+            </div>
+            <button class="header-btn" id="ignored-items-btn" title="Manage Ignored URLs">🔓</button>
+            <button class="header-btn close-btn" id="close-btn" title="Close">✕</button>
+        </div>
+    </div>
+
+    <!-- Loading State -->
+    <div id="loading-state" class="state">
+        <div class="spinner"></div>
+        <p class="status-text">Analyzing...</p>
+        <p class="url-display" id="current-url-loading">Processing URL...</p>
+    </div>
+
+    <!-- Safe Result -->
+    <div id="safe-state" class="state" style="display: none;">
+        <div class="status-icon safe-color">✓</div>
+        <h2 class="status-title safe-color">SAFE</h2>
+        <p class="status-subtitle">Website appears legitimate</p>
+        
+        <div class="info-controls">
+            <button class="btn btn-secondary info-toggle" type="button">More info</button>
+        </div>
+        <div class="more-info">
+            <div class="details-card">
+                <div class="detail-row">
+                    <span class="label">URL:</span>
+                    <span class="value" id="url-safe">example.com</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Confidence:</span>
+                    <span class="value confidence-value" id="confidence-safe">99.2%</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Risk Level:</span>
+                    <span class="value"><span class="badge safe-badge">LOW</span></span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Analysis:</span>
+                    <span class="value" id="time-safe">243ms</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phishing Detected Result -->
+    <div id="dangerous-state" class="state" style="display: none;">
+        <div class="status-icon danger-color">X</div>
+        <h2 class="status-title danger-color">PHISHING DETECTED</h2>
+        <p class="status-subtitle">Do not enter credentials</p>
+        
+        <div class="info-controls">
+            <button class="btn btn-secondary info-toggle" type="button">More info</button>
+        </div>
+        <div class="more-info">
+            <div class="details-card danger-card">
+                <div class="detail-row">
+                    <span class="label">URL:</span>
+                    <span class="value" id="url-dangerous">example.com</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Confidence:</span>
+                    <span class="value confidence-value" id="confidence-dangerous">94.8%</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Risk Level:</span>
+                    <span class="value"><span class="badge danger-badge">HIGH</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Take me away button -->
+        <button class="btn btn-danger" id="take-me-away-btn" style="width: 100%; margin-top: 12px;">Take me away</button>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="actions">
+    </div>
+
+    <!-- Ignored URLs Modal -->
+    <div id="ignored-urls-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🔓 Ignored URLs</h3>
+                <button class="modal-close" id="modal-close-btn">✕</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">URLs you chose to continue to despite phishing warnings:</p>
+                <div id="ignored-urls-list" class="ignored-urls-list">
+                    <!-- URLs will be populated here -->
+                </div>
+                <div id="no-ignored-urls" class="no-items" style="display: none;">
+                    <p>No ignored URLs</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" id="clear-all-btn">Clear All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>PhishGuard | Minhal Ali | APU FYP</p>
+        <p class="version">v2.0.0 | CNN Deep Learning Model</p>
+    </div>
+
+    <!-- TensorFlow.js from local files -->
+    <script src="lib/tf-core.min.js"></script>
+    <script src="lib/tf-layers.min.js"></script>
+    <script src="lib/tf-backend-cpu.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

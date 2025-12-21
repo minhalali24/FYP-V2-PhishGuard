@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard - Security Warning</title>
+    <link rel="stylesheet" href="warning.css">
+</head>
+<body>
+    <div class="warning-container">
+        <!-- Header -->
+        <div class="warning-header">
+            <div class="logo">P</div>
+            <div class="header-text">
+                <h1>PhishGuard</h1>
+            </div>
+        </div>
+
+        <!-- Warning Content -->
+        <div class="warning-content">
+            <div class="warning-icon">🛡️</div>
+            <h2 class="warning-title">Phishing Detected</h2>
+            
+            <!-- Compact Details -->
+            <div class="details-compact">
+                <div class="detail-row">
+                    <span>Risk:</span>
+                    <span class="threat-high">HIGH</span>
+                </div>
+                <div class="detail-row">
+                    <span>Confidence:</span>
+                    <span id="confidence-display">--</span>
+                </div>
+            </div>
+
+            <!-- Warning Checklist -->
+            <div class="warning-checklist">
+                <div class="check-item">✕ Don't enter personal info</div>
+                <div class="check-item">✕ Don't enter passwords</div>
+                <div class="check-item">✕ Don't make payments</div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-away" id="safe-button" type="button">Take me away</button>
+                <button class="btn btn-warning" id="continue-button" type="button">Continue anyway</button>
+            </div>
+        </div>
+
+        <div class="warning-footer">
+            <p>PhishGuard | Minhal Ali | APU FYP</p>
+        </div>
+    </div>
+
+    <script src="warning.js"></script>
+</body>
+</html>

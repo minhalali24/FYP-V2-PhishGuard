@@ -1,0 +1,270 @@
+/* PhishGuard Warning Page - Compact Single View */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Light Mode (Default) */
+    --bg: #e7f2ff;
+    --panel: #ffffff;
+    --text: #0f1a2b;
+    --accent: #00a8ff;
+    --danger: #d72638;
+    --muted: #4a5974;
+}
+
+body.dark-mode {
+    --bg: #050b14;
+    --panel: #0b1423;
+    --text: #e9fbff;
+    --accent: #26f2ff;
+    --danger: #ff6b6b;
+    --muted: #a7bddf;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--bg), var(--bg) 80%);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.warning-container {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background-color: var(--panel);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    pointer-events: auto;
+}
+
+/* Header - Match Extension Theme */
+.warning-header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background: #1e3a8a;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.6));
+}
+
+.header-text h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}
+
+/* Content - Compact Layout */
+.warning-content {
+    flex: 1;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    pointer-events: auto;
+}
+
+.warning-icon {
+    font-size: 36px;
+    text-align: center;
+    animation: bounce 1s infinite;
+    margin-bottom: 6px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+.warning-title {
+    font-size: 18px;
+    color: var(--danger);
+    text-align: center;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+/* Compact Details */
+.details-compact {
+    background-color: rgba(215, 38, 56, 0.08);
+    border-left: 3px solid var(--danger);
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+}
+
+.detail-row span:first-child {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.detail-row span:last-child {
+    color: var(--muted);
+}
+
+.threat-high {
+    color: var(--danger) !important;
+    font-weight: 700;
+}
+
+/* Warning Checklist */
+.warning-checklist {
+    background-color: rgba(215, 38, 56, 0.05);
+    border-left: 3px solid var(--danger);
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.check-item {
+    color: var(--text);
+    padding: 3px 0;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 8px;
+    flex-shrink: 0;
+    pointer-events: auto !important;
+}
+
+.btn {
+    padding: 9px 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    pointer-events: auto !important;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-safe {
+    background-color: #10b981;
+    color: white;
+}
+
+.btn-safe:hover {
+    background-color: #059669;
+}
+
+.btn-away {
+    background-color: #10b981;
+    color: white;
+}
+
+.btn-away:hover {
+    background-color: #059669;
+}
+
+.btn-warning {
+    background-color: #d72638;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #c71f35;
+}
+
+.btn-warning:hover {
+    background-color: #c71f35;
+}
+
+/* Footer */
+.warning-footer {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 10px;
+    color: var(--muted);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.warning-footer p {
+    margin: 2px 0;
+}
+
+/* Dark Mode Header */
+body.dark-mode .warning-header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+}
+
+body.dark-mode .details-compact {
+    background-color: rgba(255, 100, 110, 0.08);
+}
+
+body.dark-mode .warning-checklist {
+    background-color: rgba(255, 100, 110, 0.08);
+}
+
+/* Scrollbar */
+.warning-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.warning-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.warning-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 168, 255, 0.3);
+    border-radius: 3px;
+}
+
+.warning-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 168, 255, 0.5);
+}

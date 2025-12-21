@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "PhishGuard AI",
+  "version": "2.0.0",
+  "description": "Real-time phishing detection using CNN",
+  "permissions": [
+    "tabs",
+    "webNavigation",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "lib/tf-core.min.js",
+        "lib/tf-layers.min.js",
+        "lib/tf-backend-cpu.min.js",
+        "models/model.json",
+        "models/group1-shard1of1.bin",
+        "models/vocabulary.json",
+        "warning.html",
+        "warning.css",
+        "warning.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
