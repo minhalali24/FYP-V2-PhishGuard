@@ -7,7 +7,7 @@ The following steps explain how end users can install and use the PhishGuard bro
 
 **Step 1: Download the Extension Files**
 
-Visit the GitHub repository: https://github.com/minhalali24/FYP-V1-PhishGuard-
+Visit the GitHub repository: https://github.com/minhalali24/FYP-V2-PhishGuard
 
 Click Code and select Download ZIP
 
