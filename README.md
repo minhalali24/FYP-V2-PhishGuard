@@ -38,7 +38,6 @@ The following steps explain how end users can install and use the PhishGuard bro
 4. View and manage the list of ignored URLs 
 
 What are "Ignored URLs"?
-Simple Explanation:
 Ignored URLs are websites that you have personally decided to trust, even if PhishGuard warns you about them.
 
 Why would you ignore a URL?
