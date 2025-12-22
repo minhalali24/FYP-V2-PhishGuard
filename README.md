@@ -7,44 +7,47 @@ The following steps explain how end users can install and use the PhishGuard bro
 
 **Step 1: Download the Extension Files**
 
-Visit the GitHub repository: https://github.com/minhalali24/FYP-V2-PhishGuard
+1. Visit the GitHub repository: https://github.com/minhalali24/FYP-V2-PhishGuard
+2. Click Code and select Download ZIP
+3. Extract the downloaded ZIP file to a folder on your computer
 
-Click Code and select Download ZIP
-
-Extract the downloaded ZIP file to a folder on your computer
 
 **Step 2: Enable Chrome Developer Mode**
 
-Open Google Chrome
-
-Navigate to chrome://extensions/
-
-Enable Developer Mode using the toggle in the top-right corner
+1. Open Google Chrome
+2. Navigate to chrome://extensions/
+3. Enable Developer Mode using the toggle in the top-right corner
 
 **Step 3: Load the Extension**
 
-Click Load unpacked
-
-Select the extracted PhishGuard extension folder
-
-Click Open
+1. Click Load unpacked
+2. Select the extracted PhishGuard extension folder
+3. Click Open
 
 **Step 4: Verify Installation**
 
-The extension appears in chrome://extensions/
-
-The PhishGuard icon is visible in the Chrome toolbar
-
-The extension is ready for immediate use
+1. The extension appears in chrome://extensions/
+2. The PhishGuard icon is visible in the Chrome toolbar
+3. The extension is ready for immediate use
 
 **Step 5: Configure Settings (Optional)**
-Click the PhishGuard icon in the Chrome toolbar
 
-Access the settings through the popup interface
+1. Click the PhishGuard icon in the Chrome toolbar
+2. Access the settings through the popup interface
+3. Enable Dark Mode if preferred
+4. View and manage the list of ignored URLs 
 
-Enable Dark Mode if preferred
+What are "Ignored URLs"?
+Simple Explanation:
+Ignored URLs are websites that you have personally decided to trust, even if PhishGuard warns you about them.
 
-View and manage the list of ignored URLs
+Why would you ignore a URL?
+Sometimes PhishGuard might incorrectly warn you about a safe website. If this happens:
+
+1. You see the warning
+2. You recognize the website is actually safe
+3. You click "Continue anyway"
+4. That URL gets added to your Ignored URLs list
 
 All detection and processing are performed locally within the browser. No external servers or third-party services are required.
 
