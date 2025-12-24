@@ -209,6 +209,16 @@ async function checkCurrentURL() {
         console.log('[PhishGuard] Confidence:', confidence);
         console.log('[PhishGuard] Threshold: 0.99');
         
+        // Check if URL is in ignored list
+        const ignoredUrls = await loadIgnoredUrls();
+        const isIgnored = isUrlIgnored(fullUrl, ignoredUrls);
+        
+        if (isIgnored) {
+            console.log('[PhishGuard] RESULT: 🟢 SAFE (URL is in ignored list)');
+            showSafeState(fullUrl, 1 - confidence, time);
+            return;
+        }
+        
         // ========== 2 STATES ONLY ==========
         // SAFE if confidence <= 0.99
         // PHISHING if confidence > 0.99
@@ -300,6 +310,25 @@ if (takeMeAwayBtn) {
 // ============================================================================
 // IGNORED URLS MANAGER
 // ============================================================================
+
+function getDomainAndPath(url) {
+    try {
+        const urlObj = new URL(url);
+        // Return origin + pathname (no query string or hash)
+        return urlObj.origin + urlObj.pathname;
+    } catch (error) {
+        console.error('[PhishGuard] Invalid URL:', url);
+        return url;
+    }
+}
+
+function isUrlIgnored(url, ignoredUrls) {
+    const urlDomainPath = getDomainAndPath(url);
+    return ignoredUrls.some(ignoredUrl => {
+        const ignoredDomainPath = getDomainAndPath(ignoredUrl);
+        return urlDomainPath === ignoredDomainPath;
+    });
+}
 
 async function loadIgnoredUrls() {
     return new Promise((resolve) => {
