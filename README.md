@@ -1,3 +1,67 @@
+<img width="970" height="505" alt="image" src="https://github.com/user-attachments/assets/623b3787-b3af-4e2a-b24b-082b2fe86e22" />**Developed by Minhal Ali | Final Year Project (FYP)**
+
+This project is developed strictly for academic and educational purposes as part of a Final Year Project (FYP). It is intended for research, learning, and demonstration only.
+
+**What is PhishGuard?**
+
+PhishGuard is a browser extension that uses **Deep Learning (CNN)** to detect phishing websites in real-time. It protects users by analyzing URLs before pages load, blocking malicious sites while allowing legitimate websites to work normally.
+
+## Core Features
+###  **Detection**
+- Character-level CNN model trained on 686,816 URLs
+- 97.12% detection accuracy
+- Real-time analysis in under 500ms
+
+###  **Security Indicators**
+- SSL/HTTPS connection verification
+- Risk level classification (Low, Medium, High, Critical)
+- Visual security warnings
+
+###  **User-Friendly Interface**
+- Clean, modern design
+- Dark mode support
+- Instant security status display
+
+###  **Smart Controls**
+- Ignored URLs  (trusted sites)
+- Continue anyway option for false positives
+- One-click "Take me away" safety button
+
+---
+
+## 🌍 How PhishGuard Protects You
+
+In today's digital world, phishing attacks are everywhere:
+- 🔗 Malicious links on social media or shared by trustable end user
+
+**PhishGuard stops these threats by:**
+1. ✅ Analyzing every URL you visit in real-time
+2. ✅ Blocking dangerous sites before they load
+3. ✅ Letting you browse legitimate websites without interruption
+
+##  How It Works 
+
+###  **Detecting Phishing Websites**
+
+When you visit a phishing URL, PhishGuard instantly blocks it:
+
+
+<img width="970" height="505" alt="image" src="https://github.com/user-attachments/assets/29b12e07-1c42-445e-a293-edb6c0d393cb" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # FYP-V2-PhishGuard
 Project Purpose  This project is developed strictly for academic and educational purposes as part of a Final Year Project (FYP). It is intended for research, learning, and demonstration only.
 
