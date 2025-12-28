@@ -159,7 +159,7 @@ The following steps explain how end users can install and use the PhishGuard bro
 2. Select the extracted PhishGuard extension folder
 3. Click Open
 
-<img width="1918" height="967" alt="image" src="https://github.com/user-attachments/assets/3c0238f0-24ea-4eaf-95e5-fde0f7529f27" />
+<img width="1916" height="931" alt="image" src="https://github.com/user-attachments/assets/47a1646c-e2b1-4cff-b881-3f2eba4db905" />
 
 **Loading the extension**
 
