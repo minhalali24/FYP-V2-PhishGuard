@@ -140,6 +140,7 @@ The following steps explain how end users can install and use the PhishGuard bro
 3. Extract the downloaded ZIP file to a folder on your computer
 
 <img width="1915" height="960" alt="image" src="https://github.com/user-attachments/assets/d3eff870-70ed-4550-80f7-2201f36117eb" />
+
 **Downloading PhishGuard from GitHub**
 
 **Step 2: Enable Chrome Developer Mode**
@@ -149,6 +150,7 @@ The following steps explain how end users can install and use the PhishGuard bro
 3. Enable Developer Mode using the toggle in the top-right corner
 
 <img width="1922" height="980" alt="image" src="https://github.com/user-attachments/assets/c3be1468-267e-4686-9f30-4b1124715e7b" />
+
 **Enabling Developer Mode in Chrome**
 
 **Step 3: Load the Extension**
@@ -158,6 +160,7 @@ The following steps explain how end users can install and use the PhishGuard bro
 3. Click Open
 
 <img width="1918" height="967" alt="image" src="https://github.com/user-attachments/assets/3c0238f0-24ea-4eaf-95e5-fde0f7529f27" />
+
 **Loading the extension**
 
 **Step 4: Verify Installation**
@@ -167,6 +170,7 @@ The following steps explain how end users can install and use the PhishGuard bro
 3. The extension is ready for immediate use
 
 <img width="1908" height="958" alt="image" src="https://github.com/user-attachments/assets/74625776-55b7-4e4b-a813-14bf3efbff83" />
+
 **Successfully installed PhishGuard***
 
 ---
@@ -178,6 +182,7 @@ The following steps explain how end users can install and use the PhishGuard bro
 Click PhishGuard icon → Toggle dark mode for comfortable viewing
 
 <img width="581" height="722" alt="image" src="https://github.com/user-attachments/assets/e050a459-6efe-4102-abc5-d99e48b44e4f" />
+
 **PhishGuard in dark mode**
 
 ---
@@ -190,6 +195,7 @@ Click PhishGuard icon → Toggle dark mode for comfortable viewing
 - Useful for false positives
 
 <img width="512" height="632" alt="image" src="https://github.com/user-attachments/assets/c107b318-2806-4947-ac5e-4fa3c5c5cd20" />
+
 **Managing trusted websites**
 
 **To manage:**
@@ -208,7 +214,6 @@ Sometimes PhishGuard might incorrectly warn you about a safe website (2.88% chan
 5. Future visits to that site won't trigger warnings
 
 All detection and processing are performed locally within the browser. No external servers or third-party services are required.
-
 
 ---
 
